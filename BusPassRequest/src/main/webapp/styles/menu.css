@@ -1,0 +1,52 @@
+@charset "ISO-8859-1";
+#cnt{
+	width:900px;
+	margin:20px 20px 20px 20px;
+	padding:10px 10px 10px 10px;
+	border:3px solid ;
+	box-radius:3px;
+	display:inline-block;
+}
+ul{
+	
+	margin:0;
+	padding:0;
+	text-decoration:none;
+}
+ul li{
+		margin:0;
+	padding:0;
+	text-decoration:none;
+	
+}
+ul li a:link{
+		margin:0;
+	padding:0;
+	text-decoration:none;
+	color:white;
+}
+ul li {
+	width:100px;
+	padding:5px 5px 5px 5px;
+	backgrounf:blue;
+	color:white;
+	font-size:14px;
+	font-weight:bold;
+	border-bottom:2px solid white;
+}
+#menu{
+	width:300px;
+	float:left;
+}
+#myframe{
+	float:left;
+	dispaly:inline-block;
+	
+	
+}
+iframe{
+	width:400px;
+	text-decoration:none;
+	margin:0;
+	padding:0;
+}

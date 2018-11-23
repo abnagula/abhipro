@@ -1,0 +1,286 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<script type="text/javascript" src="script/validator.js"></script>
+<style>
+body,html {
+    height: 100%;
+    margin: 0;
+}
+
+.bg {
+    /* The image used */
+    background-image: url("https://www.daimler.com/bilder/produkte/busse/busworld-europe-2017-kortrijk/citaro-titelbild-fs-w1024xh512-cutout.jpg");
+
+    /* Full height */
+    height: 200%; 
+
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.loginform{
+	width:400px;
+	padding:8% 0 0;
+	margin:auto;
+	border-radius: 0px;
+	
+}
+.form{
+	position:relative;
+	
+	max-width:360px;
+	margin:0 auto 100px;
+	padding :45px;
+	text-align:center;
+	border-radius: 25px;
+	box-shadow:5px 5px 5px 5px;
+}
+.form input{
+	font-family:"Roboto",fantasy;
+	outline:0;
+	background:highlight;
+	width:100%;
+	border:0;
+	margin:0 0 15px;
+	padding:15px;
+	border-radius: 0px;
+	box-sizing:border-box;
+	font-size:14px;
+	
+}
+.btn{
+	font-size:14px;
+	font-weight:bolder;
+	padding: 5px 5px 5px 5px;
+	background-color: #008000;
+	color:black;
+	border:1px solid green;	
+}
+#centerCnt{
+	width: 1400px;
+	display: inline-block;
+	
+}
+
+.myimg{
+	width: 300px;
+	margin: 10px 10px 10px 10px;
+	float: left;
+}
+
+
+</style>
+</head>
+<body >
+<div class="bg">
+	<h2 align="center">Bus Pass Form</h2>
+	<hr>
+	
+<div id="centerCnt">
+<div class="loginform">
+	<div class = "form">
+	<form name="reqform" action="../PassRequestServlet" method="post" onsubmit="return validatesemployee()">
+		<table align="center">
+		
+		<tr>
+			<td>Employee Id:</td><td><input type="text" name="empid"></td>
+		</tr>
+		<tr>
+			<td>First Name:</td><td><input type="text" name="fname"></td>
+		</tr>
+		<tr>
+			<td>Last Name:</td><td><input type="text" name="lname"></td>
+		</tr>
+		<tr>
+			<td>Email Id:</td><td><input type="text" name="emailid"></td>
+		</tr>
+		<tr>
+			<td>Gender:</td><td><input type="radio" name="gender" value="male">male <input type="radio" name="gender" value="female">female</td>
+		</tr>
+		<tr>
+		<td>Designation :</td><td><select name="designation">
+		<option value="Software Enginner">Software Enginner</option>
+		<option value=" Senior Software Enginner">Senior Software Enginner</option>
+		<option value="Associate Consultant">Associate Consultant</option>
+		<option value="Senior Consultant">Senior Consultant</option>
+		<option value="Manager">Manager</option>
+		<option value="Senior Manager">Senior Manager</option>
+		</select></td>
+		</tr>
+		<tr>
+			<td>Address:</td><td><textarea rows="3" cols="4" name="address" ></textarea></td>
+		</tr>
+		<tr>
+			<td>Date Of Joining:</td><td><input type="date" name="doj"> </td>
+		</tr>
+		<tr>
+		<td>Location :</td><td><select name="location">
+		<option value="chennail-Mipl">Chennai MIPL</option>
+		<option value="chennail-SIPCOT">Chennai SIPCOT</option>
+		<option value="chennail-PCT">Chennai PCT</option>
+		</select></td>
+		</tr>
+		<tr>
+		<td>PickUp Location :</td><td><select name="pickuplocation">
+		<option value="Tambaram">Tambaram</option>
+		<option value="Parnur">Parnur</option>
+		<option value="Karapakam">karapakam</option>
+		</select></td>
+		</tr>
+		<tr>
+			<td>Pick Up Time:</td><td><input type="time" name="pickuptime"> </td>
+		</tr>
+		
+		<tr>
+			<td></td><td><input type="submit" name="submit" value="submit"> </td>
+		</tr>
+		
+		</table>
+	
+	</form>
+		</div>
+	</div>
+
+
+
+</div>
+</div>
+
+	
+</body>
+</html>
+
+<!-- <!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+    box-sizing: border-box;
+}
+
+input[type=text], select, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: vertical;
+}
+
+label {
+    padding: 12px 12px 12px 0;
+    display: inline-block;
+}
+
+input[type=submit] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    float: right;
+}
+
+input[type=submit]:hover {
+    background-color: #45a049;
+}
+
+.container {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+}
+
+.col-25 {
+    float: left;
+    width: 25%;
+    margin-top: 6px;
+}
+
+.col-75 {
+    float: left;
+    width: 75%;
+    margin-top: 6px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+    .col-25, .col-75, input[type=submit] {
+        width: 100%;
+        margin-top: 0;
+    }
+}
+</style>
+</head>
+<body>
+
+<h1 align="center">Add Route Here </h1>
+
+<div class="container">
+  <form name="reqform" action="../PassRequestServlet" method="post" onsubmit="return validatesemployee()">
+  	
+    <div class="row">
+      <div class="col-25">
+        <label for="fname">Employee id*:</label>
+      </div>
+      <div class="col-75">
+        <input type="text" id="fname" name="empid" placeholder="Employee id..">
+      </div>
+      </div>
+      <div class="row">
+      <div class="col-25">
+        <label for="fname">First Name:</label>
+      </div>
+      <div class="col-75">
+        <input type="text" id="fname" name="totalseats" placeholder="First name..">
+      </div>
+      </div>
+      <div class="row">
+      <div class="col-25">
+        <label for="fname">Last Name:</label>
+      </div>
+      <div class="col-75">
+        <input type="text" id="fname" name="busno" placeholder="Bus number">
+      </div>
+      </div>
+       <div class="row">
+      <div class="col-25">
+        <label for="fname">Email id</label>
+      </div>
+      <div class="col-75">
+        <input type="text" id="fname" name="drivername" placeholder="Driver name">
+      </div>
+      </div>
+       <div class="row">
+      <div class="col-25">
+        <label for="fname">Total km</label>
+      </div>
+      <div class="col-75">
+        <input type="text" id="fname" name="totalkm" placeholder="Totalkm">
+      </div>
+      </div>
+    <div class="row">
+      <input type="submit" value="Add Route"name="addroute">
+    </div>
+  </form>
+</div>
+
+</body>
+</html>
+
+ -->

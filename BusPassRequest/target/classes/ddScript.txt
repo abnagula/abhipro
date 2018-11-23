@@ -1,0 +1,5 @@
+create table route_table(route_id int primary key auto_increment,route_path varchar(200),no_of_seats 
+  int,total_seats int,bus_no varchar(10),driver_name varchar(20),total_km int);
+ 
+ 
+ insert into route_table(route_path,no_of_seats,total_seats,bus_no,driver_name,total_km) values('ChennaiMIPL,Tambaram,Parnur',10,35,'1A','John',45);
